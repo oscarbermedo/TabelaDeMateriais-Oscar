@@ -1,0 +1,9 @@
+### Teste da Ação Adicionar Material
+POST http://localhost:4004/odata/v4/material/adicionarMaterial
+Content-Type: application/json
+
+{
+    "NumMat": 2000,
+    "Nome": "Gabinete",
+    "Descr": "Gabinete Gamer"
+}
