@@ -10,6 +10,13 @@
             </layout:HorizontalLayout>
 
             <Table id="tabelaMateriais" items="{/tableMaterial}" class="sapUiSmallMargin">
+                <headerToolbar>
+        <OverflowToolbar>
+            <Title text="Materiais Disponíveis" />
+            <ToolbarSpacer />
+            <Button icon="sap-icon://add" text="Criar Novo"  press=".onAbrirDialog" type="Transparent" />
+        </OverflowToolbar>
+    </headerToolbar>
                 <columns>
                     <Column id="coltextID"><Text id="textID" text="ID" /></Column>
                     <Column id="colMaterial" ><Text id="textMaterial" text="Número do Material" /></Column>
