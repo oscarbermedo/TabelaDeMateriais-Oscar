@@ -1,0 +1,32 @@
+<mvc:View controllerName="tabelamateriais.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:layout="sap.ui.layout">
+    
+    <Page id="page" title="Gestão de Materiais">
+        <content>
+            <layout:HorizontalLayout id="layoutFiltro" class="sapUiSmallMargin">
+                <Input id="inputFiltro" placeholder="Digite a quantidade..." type="Number" width="200px"/>
+                <Button id="buttonFiltro" text="Filtrar" press=".onFiltrar" class="sapUiTinyMarginBegin" type="Emphasized"/>
+            </layout:HorizontalLayout>
+
+            <Table id="tabelaMateriais" items="{/tableMaterial}" class="sapUiSmallMargin">
+                <columns>
+                    <Column id="coltextID"><Text id="textID" text="ID" /></Column>
+                    <Column id="colMaterial" ><Text id="textMaterial" text="Número do Material" /></Column>
+                    <Column id="colNome"><Text id="textNome" text="Nome" /></Column>
+                    <Column id="colDesc"><Text id="textDesc" text="Descrição" /></Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="listItem">
+                        <cells>
+                            <Text id="textListID" text="{ID}" />
+                            <Text id="textListMat" text="{NumMat}" />
+                            <Text id="textListNome" text="{Nome}" />
+                            <Text id="textListDesc" text="{Descr}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

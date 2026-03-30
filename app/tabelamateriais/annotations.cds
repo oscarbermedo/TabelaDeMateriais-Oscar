@@ -1,0 +1,1 @@
+using MaterialService as service from '../../srv/service';
